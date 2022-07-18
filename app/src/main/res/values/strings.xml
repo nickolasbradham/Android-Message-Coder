@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Message Coder</string>
+    <string name="input_default">Enter message here.</string>
+    <string name="shift_hint">Encoder Letter Shift Amount</string>
+    <string name="shift_label">Shift By:</string>
+    <string name="decode_text">Decode</string>
+    <string name="encode_text">Encode</string>
+    <string name="output_default">Output text will go here.</string>
+    <string name="input_hint">Input Field</string>
+    <string name="default_shift">1</string>
+</resources>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/inputField"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/input_hint"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/shiftNum"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/shift_hint"
+        android:inputType="numberDecimal"
+        android:text="@string/default_shift"
+        android:textColorHint="#757575"
+        app:layout_constraintEnd_toStartOf="@+id/encodeButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/shiftTag"
+        app:layout_constraintTop_toBottomOf="@+id/inputField" />
+
+    <TextView
+        android:id="@+id/shiftTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/shift_label"
+        app:layout_constraintBaseline_toBaselineOf="@+id/shiftNum"
+        app:layout_constraintEnd_toStartOf="@+id/shiftNum"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/encodeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:onClick="encode"
+        android:text="@string/encode_text"
+        app:layout_constraintBaseline_toBaselineOf="@+id/shiftNum"
+        app:layout_constraintEnd_toStartOf="@+id/decodeButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/shiftNum" />
+
+    <Button
+        android:id="@+id/decodeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="decode"
+        android:text="@string/decode_text"
+        app:layout_constraintBaseline_toBaselineOf="@+id/shiftNum"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/encodeButton" />
+
+    <TextView
+        android:id="@+id/outputField"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:enabled="true"
+        android:focusable="true"
+        android:longClickable="true"
+        android:minHeight="48dp"
+        android:text="@string/output_default"
+        android:textIsSelectable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/shiftNum" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
